@@ -1,41 +1,28 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { NavLink } from 'react-router-dom';
-
-import Typography from '../../atoms/Typography';
 import Icon from '../../atoms/Icon';
 import styles from '../../../styles/layouts/Menu.module.scss';
-import List from '../List';
+import NavMenu from '../NavMenu';
+import Contact from '../../compounds/Contact';
+
+import { contactList } from '../../../assets/lists';
 
 const Menu = ({ initial, open, onClose, links }) => {
+  const className = initial
+    ? styles.menuAsideInitial
+    : open
+    ? styles.menuAside
+    : styles.menuAsideHide;
+
   return ReactDOM.createPortal(
-    <aside
-      className={
-        initial
-          ? styles.menuAsideInitial
-          : open
-          ? styles.menuAside
-          : styles.menuAsideHide
-      }
-    >
+    <aside className={className}>
       <Icon
         onClick={onClose}
         className={open ? 'rightChevron' : 'rightChevronClose'}
         name={'ChevronRightCircle'}
       />
-      <Typography variant={'h1'} children={'Menu'} />
-      <nav>
-        {links.map((linkProps, index) => (
-          <NavLink
-            activeStyle={{ borderLeft: '5px solid #7c5295' }}
-            style={{ borderLeft: '3px solid rgba(0,0,0,0)' }}
-            onClick={onClose}
-            key={`navlink-${index}`}
-            {...linkProps}
-          />
-        ))}
-      </nav>
-      <List list={} />
+      <NavMenu onClose={onClose} links={links} />
+      <Contact contacts={contactList} />
     </aside>,
     document.querySelector('.App')
   );
