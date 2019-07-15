@@ -5,12 +5,15 @@ const contactList = [
   {
     name: 'Email',
     children: <Icon name="Email" className="generic" />,
-    url: 'johntan05@gmail.com'
+    onClick: () => (window.location.href = 'mailto:johntan05@gmail.com')
   },
   {
     name: 'LinkedIn',
     children: <Icon name="LinkedIn" className="generic" />,
-    url: 'linkedin.com/in/john-tan-phd-5b1860162'
+    onClick: () =>
+      window
+        .open('https://linkedin.com/in/john-tan-phd-5b1860162', '_blank')
+        .focus()
   },
   {
     name: 'Phone',
@@ -20,7 +23,7 @@ const contactList = [
   {
     name: 'Github',
     children: <Icon name="Github" className="generic" />,
-    url: 'https://github.com/jctan05'
+    onClick: () => window.open('https://github.com/jctan05', '_blank').focus()
   }
 ];
 
