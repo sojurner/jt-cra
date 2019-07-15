@@ -1,0 +1,16 @@
+@import '../abstracts/mixins';
+@import '../partials/menu';
+
+.menuAside {
+  @include animation('slide-left .5s');
+  border-left: 1px solid #7c5295;
+}
+
+.menuAsideHide {
+  @include animation('slide-out .5s');
+  right: -250px;
+}
+
+.menuAsideInitial {
+  right: -250px;
+}

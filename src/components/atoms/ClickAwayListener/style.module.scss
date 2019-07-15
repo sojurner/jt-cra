@@ -1,0 +1,10 @@
+.genericClickAwayListener {
+  height: 100vh;
+  position: absolute;
+  width: 100vw;
+  top: 0;
+  left: 0;
+  // filter: blur(100px) brightness(0.5);
+  background: rgba(0, 0, 0, 0.377);
+  z-index: 0;
+}
