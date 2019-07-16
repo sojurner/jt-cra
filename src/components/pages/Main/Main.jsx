@@ -1,9 +1,12 @@
 import React from 'react';
 import Base from '../../layouts/Base';
+import Profile from '../../compounds/Profile';
+import Timeline from '../../organisms/Timeline';
 
 const Main = () => (
   <Base>
-    <h1>Main Content</h1>
+    <Profile className={'figureProfile'} />
+    <Timeline className={'experienceEducationTimeline'} />
   </Base>
 );
 

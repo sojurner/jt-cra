@@ -1,0 +1,32 @@
+.experienceEducationTimeline {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 100vw;
+  height: 100vh;
+
+  .experienceRoot {
+    border-right: 1px solid gray;
+    section {
+      justify-content: flex-end;
+      display: flex;
+      flex-direction: row;
+      div {
+        display: flex;
+        flex-direction: column;
+        justify-items: center;
+      }
+      h4,
+      p {
+        margin: 0;
+        padding: 10px 40px 10px 0;
+      }
+
+      h4 {
+        border-bottom: 1px solid black;
+      }
+    }
+  }
+
+  .educationRoot {
+  }
+}
