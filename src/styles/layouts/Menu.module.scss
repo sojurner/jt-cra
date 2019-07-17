@@ -4,13 +4,16 @@
 .menuAside {
   @include animation('slide-left .5s');
   border-left: 1px solid #7c5295;
+  display: initial;
 }
 
 .menuAsideHide {
   @include animation('slide-out .5s');
   right: -250px;
+  display: none;
 }
 
 .menuAsideInitial {
   right: -250px;
+  display: initial;
 }
