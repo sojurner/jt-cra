@@ -17,7 +17,7 @@ const Profile = ({ className }) => {
         style={{
           height: 187,
           width: '100%',
-          backgroundImage: `url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1do2fiqX2jxZ-cSy3EWEPzIF0TRn3ziAL_rABTonJ6UszAt9S')`,
+          background: 'linear-gradient(180deg, #2196F3 30%, #21CBF3 90%)',
           backgroundRepeat: 'no-repeat',
           position: 'absolute',
           backgroundSize: 'cover',
