@@ -86,7 +86,7 @@ const iconList = {
   Menu: {
     svg: {
       viewBox: '0 0 24 24',
-      fill: '#7c5295',
+      fill: 'white',
       width: '30',
       height: '30'
     },
