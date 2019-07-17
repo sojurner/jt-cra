@@ -1,32 +1,230 @@
 .experienceEducationTimeline {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  width: 100vw;
+  width: 100%;
   height: 100vh;
+  margin-top: 100px;
 
   .experienceRoot {
     border-right: 1px solid gray;
+    position: relative;
+    &::before {
+      border-top: 1px dashed rgba(0, 0, 0, 0.596);
+      width: 130px;
+      position: absolute;
+      content: '';
+      top: 30px;
+      left: 90px;
+    }
+
+    &::after {
+      border-top: 1px dashed rgba(0, 0, 0, 0.596);
+      width: 130px;
+      position: absolute;
+      content: '';
+      top: 30px;
+      right: 90px;
+    }
+    h1 {
+      padding: 8px 15px;
+      border-radius: 50px;
+      width: max-content;
+      box-shadow: 0 0 4px 1px rgba(0, 0, 0, 0.5);
+      margin: auto auto 70px auto;
+    }
     section {
+      position: relative;
+      margin: 70px 10px;
       justify-content: flex-end;
       display: flex;
       flex-direction: row;
       div {
         display: flex;
+        width: max-content;
         flex-direction: column;
-        justify-items: center;
-      }
-      h4,
-      p {
-        margin: 0;
-        padding: 10px 40px 10px 0;
-      }
+        justify-content: center;
+        overflow: hidden;
+        position: relative;
+        h4,
+        p {
+          margin: 0;
+          padding: 10px 40px 10px 10px;
+          text-align: left;
+        }
 
-      h4 {
-        border-bottom: 1px solid black;
+        h4 {
+          border-bottom: 1px solid black;
+        }
+
+        h5 {
+          font-size: 15px;
+          text-align: left;
+          line-height: 20px;
+          padding: 10px;
+          transition: 0.2s linear;
+          position: absolute;
+          top: -30px;
+          width: 100%;
+          height: 100%;
+          z-index: 100;
+          background: rgba(0, 0, 0, 0.801);
+          color: white;
+        }
+      }
+      section {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        border: 2px solid rgba(51, 54, 70, 0.575);
+        border-radius: 50%;
+
+        box-shadow: inset 0 0 5px 1px rgba(55, 34, 129, 0.445),
+          0 0 5px 1px rgba(0, 0, 0, 0.267);
+        margin: auto 50px auto 15px;
+        h6:first-child {
+          margin: 15px 35px 15px 15px;
+        }
+        h6:nth-child(2) {
+          margin: 15px 15px 15px 35px;
+        }
+        &::before {
+          content: '';
+          position: absolute;
+          height: 100%;
+          width: 100%;
+          top: 40px;
+          left: 15px;
+          transform: rotate(-21.5deg);
+          border-top: 1.5px solid rgba(0, 0, 0, 0.295);
+        }
+
+        &::after {
+          content: '';
+          position: absolute;
+          height: 10px;
+          width: 20px;
+          top: 40px;
+          right: -40px;
+          transform: rotate(0deg);
+          border-top: 1px solid rgba(0, 0, 0, 0.87);
+        }
+      }
+      span {
+        position: absolute;
+        top: 41%;
+        right: -16.5px;
+        height: 10px;
+        width: 10px;
+        border: 1.5px solid rgb(248, 248, 248);
+        border-radius: 50%;
+        background: rgb(151, 25, 25);
+        box-shadow: 0 0 10px 5px rgba(228, 4, 4, 0.322);
       }
     }
   }
 
   .educationRoot {
+    border-right: 1px solid gray;
+    position: relative;
+    &::before {
+      border-top: 1px dashed rgba(0, 0, 0, 0.596);
+      width: 130px;
+      position: absolute;
+      content: '';
+      top: 30px;
+      left: 90px;
+    }
+
+    &::after {
+      border-top: 1px dashed rgba(0, 0, 0, 0.596);
+      width: 130px;
+      position: absolute;
+      content: '';
+      top: 30px;
+      right: 90px;
+    }
+    h1 {
+      padding: 8px 15px;
+      border-radius: 50px;
+      width: max-content;
+      box-shadow: 0 0 4px 1px rgba(0, 0, 0, 0.5);
+      margin: auto auto 250px auto;
+    }
+    section {
+      position: relative;
+      margin: 80px 10px;
+      justify-content: flex-end;
+      display: flex;
+      flex-direction: row-reverse;
+      div {
+        display: flex;
+        width: max-content;
+        flex-direction: column;
+        justify-content: center;
+        overflow: hidden;
+        position: relative;
+        h4,
+        p {
+          margin: 0;
+          padding: 10px 10px 10px 40px;
+          text-align: right;
+        }
+
+        h4 {
+          border-bottom: 1px solid black;
+        }
+      }
+      section {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        border: 2px solid rgba(51, 54, 70, 0.575);
+        border-radius: 50%;
+
+        box-shadow: inset 0 0 5px 1px rgba(55, 34, 129, 0.445),
+          0 0 5px 1px rgba(0, 0, 0, 0.267);
+        margin: auto 15px auto 50px;
+        h6:first-child {
+          margin: 15px 15px 15px 35px;
+        }
+        h6:nth-child(2) {
+          margin: 15px 35px 15px 15px;
+        }
+        &::before {
+          content: '';
+          position: absolute;
+          height: 100%;
+          width: 100%;
+          top: 40px;
+          left: -11px;
+          transform: rotate(15deg);
+          border-top: 1.5px solid rgba(0, 0, 0, 0.295);
+        }
+
+        &::after {
+          content: '';
+          position: absolute;
+          height: 10px;
+          width: 20px;
+          top: 40px;
+          left: -40px;
+          transform: rotate(0deg);
+          border-top: 1px solid rgba(0, 0, 0, 0.87);
+        }
+      }
+      span {
+        position: absolute;
+        top: 41%;
+        left: -17px;
+        height: 10px;
+        width: 10px;
+        border: 1.5px solid rgb(248, 248, 248);
+        border-radius: 50%;
+        background: rgb(25, 80, 151);
+        box-shadow: 0 0 10px 5px rgba(4, 109, 228, 0.322);
+      }
+    }
   }
 }
