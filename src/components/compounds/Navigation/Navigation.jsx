@@ -3,8 +3,9 @@ import Icon from '../../atoms/Icon';
 import Menu from '../../molecules/Menu';
 import ClickAwayListener from '../../atoms/ClickAwayListener';
 
-const Navigation = ({ drawerProps, links }) => {
+const Navigation = ({ inverted, drawerProps, links }) => {
   const [initial, setInitial] = React.useState(true);
+
   const { drawerOpen, setDrawerOpen } = drawerProps;
 
   const toggleDrawer = () => {
@@ -21,7 +22,14 @@ const Navigation = ({ drawerProps, links }) => {
         links={links}
       />
       {drawerOpen && <ClickAwayListener onClose={toggleDrawer} />}
-      <Icon onClick={toggleDrawer} className={'generic'} name={'Menu'} />
+      <Icon
+        onClick={toggleDrawer}
+        svgProps={{
+          fill: inverted ? 'black' : 'white'
+        }}
+        className={'generic'}
+        name={'Menu'}
+      />
     </>
   );
 };

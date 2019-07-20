@@ -3,14 +3,19 @@ import Icon from '../../components/atoms/Icon';
 
 export const routes = [
   {
+    exact: true,
     path: '/',
     component: lazy(() => import('../../components/pages/Main'))
   },
   {
+    exact: true,
+
     path: '/about',
     component: lazy(() => import('../../components/pages/About'))
   },
   {
+    exact: true,
+
     path: '/projects',
     component: lazy(() => import('../../components/pages/Projects'))
   }
