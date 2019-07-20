@@ -1,6 +1,30 @@
 import React from 'react';
+
 import ProfileTab from '../../molecules/ProfileTab';
+import Buffer from '../../wrappers/Buffer';
+import Cards from '../../compounds/Cards';
 import styles from '../../../styles/components/compounds/Profile.module.scss';
+
+const imgUrl =
+  'https://cdn.shopify.com/s/files/1/0533/2089/files/placeholder-images-image_large.png?v=1530129081';
+
+const list = [
+  {
+    imgUrl,
+    title: 'About',
+    to: '/about'
+  },
+  {
+    imgUrl,
+    title: 'Work',
+    to: '/projects'
+  },
+  {
+    imgUrl,
+    title: 'Timeline',
+    to: '/contact'
+  }
+];
 
 const Profile = ({ className }) => {
   const [mounted, setMounted] = React.useState(false);
@@ -15,9 +39,9 @@ const Profile = ({ className }) => {
     <div className={styles[className]}>
       <div
         style={{
-          height: 187,
+          height: 175,
           width: '100%',
-          background: 'linear-gradient(180deg, #2196F3 30%, #21CBF3 90%)',
+          backgroundImage: `url('https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/SxyKBum7ion8fkbr/videoblocks-gray-abstract-low-poly-triangle-background_sygowhrug_thumbnail-full01.png')`,
           backgroundRepeat: 'no-repeat',
           position: 'absolute',
           backgroundSize: 'cover',
@@ -27,7 +51,9 @@ const Profile = ({ className }) => {
         }}
       />
       <ProfileTab mounted={mounted} styles={styles} />
-      {/* <Cards list={} /> */}
+      <Buffer>
+        <Cards list={list} />
+      </Buffer>
     </div>
   );
 };
