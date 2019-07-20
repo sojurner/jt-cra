@@ -16,9 +16,9 @@ const contactList = [
         .focus()
   },
   {
-    name: 'Phone',
-    children: <Icon name="Phone" className="generic" />,
-    url: '909-558-5267'
+    name: 'Instagram',
+    children: <Icon name="Instagram" className="generic" />,
+    url: 'https://www.instagram.com/instajohnctan/'
   },
   {
     name: 'Github',

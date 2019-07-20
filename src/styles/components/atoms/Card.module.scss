@@ -5,7 +5,7 @@
   background: #fff;
   margin: 0 auto;
   border-radius: 4px;
-  border: 1px solid rgba(0, 0, 0, 0.151);
+  border: 1px solid rgba(0, 0, 0, 0.192);
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
 
   &:hover {
@@ -67,8 +67,12 @@
     bottom: 10px;
     height: 60px;
     text-align: center;
+    display: flex;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.01);
 
     h2 {
+      align-self: center;
       margin: 0;
       padding: 0;
       font-weight: 600;

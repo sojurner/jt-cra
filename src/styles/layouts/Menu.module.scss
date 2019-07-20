@@ -1,10 +1,14 @@
 @import '../abstracts/mixins';
 @import '../partials/menu';
 
+$zIndex: 10001;
+
 .menuAside {
   @include animation('slide-left .5s');
+  position: fixed;
   border-left: 1px solid #7c5295;
   display: initial;
+  z-index: $zIndex;
 }
 
 .menuAsideHide {
@@ -14,6 +18,8 @@
 }
 
 .menuAsideInitial {
+  position: fixed;
   right: -250px;
+  z-index: $zIndex;
   display: initial;
 }

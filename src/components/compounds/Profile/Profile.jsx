@@ -10,12 +10,13 @@ const imgUrl =
 
 const list = [
   {
-    imgUrl,
+    imgUrl:
+      'https://us.123rf.com/450wm/vectorplus/vectorplus1606/vectorplus160600510/58663755-dumbbell-vector-icon-white-illustration-isolated-on-black-background-for-graphic-and-web-design-.jpg?ver=6',
     title: 'About',
     to: '/about'
   },
   {
-    imgUrl,
+    imgUrl: 'https://www.bosterbio.com/media/images/MB_TRC_bg.jpg',
     title: 'Work',
     to: '/projects'
   },
