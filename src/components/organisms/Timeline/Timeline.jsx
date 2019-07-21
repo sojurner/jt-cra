@@ -8,7 +8,6 @@ import { timeline } from '../../../assets/lists/timeline';
 const Timeline = ({ className }) => {
   return (
     <div>
-      <h1>TimeLine</h1>
       <section className={styles[className]}>
         <Experience
           className={styles.experienceRoot}

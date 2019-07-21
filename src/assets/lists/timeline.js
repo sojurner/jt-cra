@@ -4,7 +4,7 @@ export const timeline = {
       title: 'Post Doctoral Fellow',
       location: 'Loma Linda University',
       description: 'being a little bitch',
-      start: '2018-12-01',
+      start: '2019-01-01',
       end: ''
     },
     {
@@ -26,16 +26,16 @@ export const timeline = {
   ],
   education: [
     {
+      type: 'Doctor of Philosphy: Biochemistry',
       institution: 'Loma Linda University',
       start: '2013-09-01',
-      end: '2018-06-01',
-      type: 'Doctor of Philosphy: Biochemistry'
+      end: '2018-06-01'
     },
     {
+      type: 'Bachelors Science Biochemistry',
       institution: 'Pacific Union College',
       start: '2009-09-01',
-      end: '2012-06-01',
-      type: 'Bachelors Science Biochemistry'
+      end: '2012-06-01'
     }
   ]
 };

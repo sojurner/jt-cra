@@ -2,46 +2,50 @@ import React from 'react';
 import Base from '../../layouts/Base';
 import Timeline from '../../organisms/Timeline';
 import Toggle, { ToggleSwitch } from '../../molecules/Toggle';
+import Typography from '../../atoms/Typography';
+import ToggleTimeline from '../../organisms/ToggleTimeline';
+import styles from './styles.module.scss';
 
 const About = () => {
   return (
     <Base>
       <ToggleSwitch>
-        {({ toggled, handleToggle }) =>
-          console.log(toggled) || (
-            <>
+        {({ toggled, handleToggle }) => (
+          <>
+            <div
+              style={{
+                display: 'flex',
+                flexDirection: 'column',
+                alignItems: 'center',
+                marginBottom: 30
+              }}
+            >
+              <Typography variant={'h1'}>Timeline</Typography>
               <Toggle
-                style={{
-                  border: '1px solid black',
-                  borderRadius: 50,
-                  position: 'relative',
-                  height: 20,
-                  width: 80,
-                  margin: 10
-                }}
+                className={styles.toggle1}
                 children={
                   <div
-                    style={{
-                      position: 'absolute',
-                      borderRadius: '50%',
-                      background: 'black',
-                      height: 20,
-                      width: 20,
-                      top: 0,
-                      left: toggled ? 0 : '100%',
-                      margin: '0 0 0 -10px'
-                    }}
+                    className={
+                      !toggled
+                        ? `${styles.toggle1_inner} ${
+                            styles.toggle1_inner_active
+                          }`
+                        : `${styles.toggle1_inner} ${
+                            styles.toggle1_inner_inactive
+                          }`
+                    }
                   />
                 }
                 onClick={handleToggle}
               />
-              {/* {toggled ? */}
+            </div>
+            {toggled ? (
               <Timeline className={'experienceEducationTimeline'} />
-              {/* :
-          } */}
-            </>
-          )
-        }
+            ) : (
+              <ToggleTimeline />
+            )}
+          </>
+        )}
       </ToggleSwitch>
     </Base>
   );

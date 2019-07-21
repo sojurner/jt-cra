@@ -2,14 +2,7 @@ import React from 'react';
 
 const ProfileTab = ({ mounted, styles }) => {
   return (
-    <section
-      onClick={() => {
-        window
-          .open('https://www.mdpi.com/2076-3921/7/3/37/htm', '_blank')
-          .focus();
-      }}
-      className={styles.container}
-    >
+    <section className={styles.container}>
       <img
         className={styles.img1}
         src="https://media.licdn.com/dms/image/C5603AQHtBUQmDP1_6Q/profile-displayphoto-shrink_800_800/0?e=1568851200&v=beta&t=hnUWIEBo-kLVK7qBsNW1kd225zvJyf_SpcMilyZ84CY"
