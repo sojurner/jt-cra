@@ -1,0 +1,64 @@
+$years: 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019;
+
+.toggle-timeline {
+  width: 100%;
+  .toggle-timeline_inner {
+    position: relative;
+    display: flex;
+    justify-items: center;
+    border-top: 0.5px solid rgba(0, 0, 0, 0.42);
+
+    width: 100%;
+
+    .toggle-timeline_hashes {
+      display: flex;
+      padding: 17px 0;
+      margin: auto;
+      width: max-content;
+
+      @each $year in $years {
+        .toggle-timeline_inner_#{$year} {
+          position: relative;
+          margin: 0 20px;
+          &::after {
+            content: '';
+            position: absolute;
+            border-left: 1px solid black;
+            height: 15px;
+            top: -25px;
+            left: 50%;
+          }
+        }
+        .toggle-timeline_inner_#{$year}_active {
+          &::before {
+            content: '';
+            position: absolute;
+            border: 1px solid black;
+            border-radius: 50%;
+            height: 5px;
+            width: 5px;
+            top: -25px;
+            left: 50%;
+          }
+        }
+      }
+    }
+  }
+
+  .toggle-timeline_buttons {
+    display: flex;
+    justify-content: center;
+    margin: 30px 0 10px 0;
+    button {
+      border: 1px solid rgb(113, 113, 113);
+      color: rgb(113, 113, 113);
+      border-radius: 10px;
+      padding: 5px 10px;
+      margin: 0 10px;
+      &:hover {
+        border: 1px solid black;
+        color: black;
+      }
+    }
+  }
+}
