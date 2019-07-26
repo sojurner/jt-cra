@@ -1,41 +1,40 @@
 export const timeline = {
   experience: [
     {
-      title: 'Post Doctoral Fellow',
+      title: 'Post-Doctoral Fellow',
       location: 'Loma Linda University',
-      description: 'being a little bitch',
-      start: '2019-01-01',
+      description: 'Post-Doctoral fellow working with multiple laboratories on electrophysiology, bioinformatics, data science, statistics, and clinical research. Responsibilities include teaching graduate and medical school level courses and organizing and executing planned experiments.',
+      start: '2019',
       end: ''
     },
     {
-      title: 'Graduate Teaching Assistant',
+      title: 'Graduate Student',
       location: 'Loma Linda University',
       description:
-        'Teachers assistant for medical physiology, big data analysis, and statistics.',
-      start: '2014-08-01',
-      end: '2018-03-01'
+        'Worked with premature neonates to objectively measure of pain while simultaneously alleviating nociceptive consequences by measuring and analyzing near infrared spectroscopy (NIRS) and electroencephalograms (EEGs), as well as examining biomarkers of urinary ATP metabolism and oxidative stress using the high-pressure liquid chromatographer (HPLC) and the gas chromatographer-mass spectroscopy (GCMS). Programming languages such as Python and R are used to analyze clinical time series data from premature neonates.
+        ',
+      start: '2013',
+      end: '2018'
     },
     {
       title: 'Science Tutor',
       location: 'Pacific Union College',
       description:
-        'Main science tutor for Pacific Union College Teaching and Learning Center.',
-      start: '2010-08-01',
-      end: '2013-06-01'
+        'Primary science tutor for Pacific Union College Teaching and Learning Center.',
+      start: '2010',
+      end: '2013'
     }
   ],
   education: [
     {
-      type: 'Doctor of Philosphy: Biochemistry',
+      type: 'PhD in Biochemistry',
       institution: 'Loma Linda University',
-      start: '2013-09-01',
-      end: '2018-06-01'
+      end: '2018'
     },
     {
-      type: 'Bachelors Science Biochemistry',
+      type: 'BS in Chemisty with an Emphasis in Biochemistry with Honors',
       institution: 'Pacific Union College',
-      start: '2009-09-01',
-      end: '2012-06-01'
+      end: '2013'
     }
   ]
 };
