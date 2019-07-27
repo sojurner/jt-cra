@@ -25,15 +25,13 @@ const Navigation = ({ inverted, drawerProps, links, history }) => {
       {drawerOpen && <ClickAwayListener onClose={toggleDrawer} />}
       <Icon
         onClick={toggleDrawer}
-        svgProps={{
-          fill:
-            history.location.pathname === '/'
-              ? inverted
-                ? 'black'
-                : 'white'
-              : 'black'
-        }}
-        className={'icon__menu'}
+        className={
+          history.location.pathname === '/'
+            ? inverted
+              ? 'icon__menu-inverted'
+              : 'icon__menu'
+            : 'icon__menu-inverted'
+        }
         name={'Menu'}
       />
     </>

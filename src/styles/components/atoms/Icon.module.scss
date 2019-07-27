@@ -2,6 +2,17 @@
 
 $menuColor: rgb(124, 82, 149);
 
+@mixin iconMenu {
+  padding: 5px 8px;
+  svg {
+    font-size: 1.5em;
+    color: white;
+  }
+  &:hover {
+    background: rgba(7, 7, 7, 0.082);
+  }
+}
+
 .rightChevron {
   border-radius: 50%;
   background: white;
@@ -29,13 +40,13 @@ $menuColor: rgb(124, 82, 149);
 }
 
 .icon__menu {
-  padding: 5px 8px;
+  @include iconMenu;
+}
+
+.icon__menu-inverted {
+  @include iconMenu;
   svg {
-    font-size: 1.5em;
-    color: white;
-  }
-  &:hover {
-    background: rgba(7, 7, 7, 0.082);
+    color: black;
   }
 }
 
