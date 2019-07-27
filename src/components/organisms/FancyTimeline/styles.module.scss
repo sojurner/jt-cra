@@ -3,7 +3,8 @@ $years: 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019;
 .toggle-timeline {
   width: 100%;
   height: 100%;
-  background: #f7f7f73d;
+  background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-ExVLz49TtNhSdLbIKNzKPaWbiL36BXuv2EJxRldmDXtoJRx4);
+  background-size: cover;
   .toggle-timeline_inner {
     position: relative;
     display: flex;
@@ -21,8 +22,7 @@ $years: 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019;
       @each $year in $years {
         .toggle-timeline_inner_#{$year} {
           position: relative;
-          margin: 0 20px;
-          color: rgb(160, 160, 160);
+          margin: 0 30px;
           &::after {
             content: '';
             position: absolute;

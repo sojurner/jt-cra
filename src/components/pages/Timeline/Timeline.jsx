@@ -17,7 +17,7 @@ const Timeline = () => {
                 display: 'flex',
                 flexDirection: 'column',
                 alignItems: 'center',
-                marginBottom: 30
+                paddingBottom: 30
               }}
             >
               <div
