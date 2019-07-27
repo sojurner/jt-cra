@@ -26,7 +26,7 @@ const ToggleTimeline = () => {
   const endRef = React.useRef();
   const [activeYears, setActiveYears] = React.useState([]);
   const [loading, setLoading] = React.useState(false);
-  const [activeTimeline, setActiveTimeline] = React.useState(education);
+  const [activeTimeline, setActiveTimeline] = React.useState(experience);
   const [activeCoordinates, setActivePosition] = React.useState(null);
   React.useEffect(() => {
     if (startRef.current && endRef.current) {

@@ -14,8 +14,6 @@ const Navigation = ({ inverted, drawerProps, links, history }) => {
     setDrawerOpen(!drawerOpen);
   };
 
-  console.log(history);
-
   return (
     <>
       <Menu
@@ -35,7 +33,7 @@ const Navigation = ({ inverted, drawerProps, links, history }) => {
                 : 'white'
               : 'black'
         }}
-        className={'generic'}
+        className={'icon__menu'}
         name={'Menu'}
       />
     </>

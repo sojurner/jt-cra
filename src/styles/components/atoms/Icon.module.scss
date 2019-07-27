@@ -1,13 +1,16 @@
 @import '../../base/icon';
 
+$menuColor: rgb(124, 82, 149);
+
 .rightChevron {
   border-radius: 50%;
   background: white;
-  border: 1px solid black;
+  color: $menuColor;
   position: absolute;
+  font-size: 1.3em;
   top: 5px;
   left: -20px;
-  padding: 5px 7px;
+  padding: 5px 7px 3px 7px;
   &:focus {
     outline: none;
   }
@@ -23,4 +26,31 @@
 .generic {
   border-radius: 50%;
   padding: 5px 8px;
+}
+
+.icon__menu {
+  padding: 5px 8px;
+  svg {
+    font-size: 1.5em;
+    color: white;
+  }
+  &:hover {
+    background: rgba(7, 7, 7, 0.082);
+  }
+}
+
+.menu__contact {
+  font-size: 2em;
+  display: flex;
+  align-items: center;
+  padding: 5px 8px;
+  color: $menuColor;
+}
+
+.navigation_item {
+  display: flex;
+  align-items: center;
+  padding: 5px 8px;
+  color: $menuColor;
+  font-size: 1.5em;
 }
