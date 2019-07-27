@@ -21,13 +21,15 @@ export const routes = [
   }
 ];
 
+const navigationItemClass = 'navigation_item';
+
 export const links = [
   {
     exact: true,
     to: '/',
     children: (
       <>
-        <Icon className="generic" name={'Home'} />
+        <Icon className={navigationItemClass} name={'Home'} />
         Home
       </>
     )
@@ -37,7 +39,7 @@ export const links = [
     to: '/about',
     children: (
       <>
-        <Icon className="generic" name={'User'} />
+        <Icon className={navigationItemClass} name={'User'} />
         About
       </>
     )
@@ -47,7 +49,7 @@ export const links = [
     to: '/projects',
     children: (
       <>
-        <Icon className="generic" name={'Toolbox'} />
+        <Icon className={navigationItemClass} name={'Toolbox'} />
         Work
       </>
     )
