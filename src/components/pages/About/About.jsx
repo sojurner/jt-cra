@@ -1,61 +1,53 @@
 import React from 'react';
 import Base from '../../layouts/Base';
-import Timeline from '../../organisms/Timeline';
-import Toggle, { ToggleSwitch } from '../../molecules/Toggle';
 import Typography from '../../atoms/Typography';
-import ToggleTimeline from '../../organisms/ToggleTimeline';
-import styles from './styles.module.scss';
+import styles from '../../../styles/pages/About.module.scss';
+import Contact from '../../compounds/Contact';
+import { contactList } from '../../../assets/lists';
+import RandomQuotes from '../../molecules/RandomQuotes';
 
 const About = () => {
   return (
     <Base>
-      <ToggleSwitch>
-        {({ toggled, handleToggle }) => (
-          <>
+      <div className={styles.about__body}>
+        <Typography variant={'h1'}>About Me</Typography>
+        <aside class={styles['profile-card']}>
+          <header>
             <div
               style={{
                 display: 'flex',
-                flexDirection: 'column',
                 alignItems: 'center',
-                marginBottom: 30
+                justifyContent: 'space-around'
               }}
             >
+              <Typography variant="h1" children="John Tan" />
               <div
                 style={{
-                  display: 'flex',
-                  alignItems: 'center',
-                  width: 280,
-                  justifyContent: 'space-evenly'
+                  width: 1,
+                  borderLeft: '.5px solid rgba(19, 19, 19, 0.28)',
+                  height: 50
                 }}
-              >
-                <Typography variant={'h1'}>Timeline</Typography>
-                <Toggle
-                  className={styles.toggle1}
-                  children={
-                    <div
-                      className={
-                        !toggled
-                          ? `${styles.toggle1_inner} ${
-                              styles.toggle1_inner_active
-                            }`
-                          : `${styles.toggle1_inner} ${
-                              styles.toggle1_inner_inactive
-                            }`
-                      }
-                    />
-                  }
-                  onClick={handleToggle}
-                />
-              </div>
+              />
+              <Typography
+                children={'Self-proclaimed Data scientist'}
+                variant="h2"
+                style={{
+                  width: 180
+                }}
+              />
             </div>
-            {toggled ? (
-              <Timeline className={'experienceEducationTimeline'} />
-            ) : (
-              <ToggleTimeline />
-            )}
-          </>
-        )}
-      </ToggleSwitch>
+            <Contact
+              enableTooltip={false}
+              className={'about'}
+              contacts={contactList}
+            />
+          </header>
+
+          <div class={styles['profile-bio']}>
+            <RandomQuotes />
+          </div>
+        </aside>
+      </div>
     </Base>
   );
 };

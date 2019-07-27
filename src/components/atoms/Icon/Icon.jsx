@@ -3,10 +3,8 @@ import iconList from '../../../assets/icons';
 import styles from '../../../styles/components/atoms/Icon.module.scss';
 
 const CustomJSX = ({ iconName }) => {
-  console.log(iconName, iconList[iconName]);
   const iconProps = [...iconList[iconName]];
   const x = iconProps.slice(1);
-
   const children = x.map(element => {
     return React.createElement(element.type, { ...element.props }, null);
   });

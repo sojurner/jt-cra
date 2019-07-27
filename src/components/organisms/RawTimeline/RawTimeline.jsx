@@ -5,7 +5,7 @@ import Education from '../../molecules/Education';
 
 import { timeline } from '../../../assets/lists/timeline';
 
-const Timeline = ({ className }) => {
+const RawTimeline = ({ className }) => {
   return (
     <div>
       <section className={styles[className]}>
@@ -20,4 +20,4 @@ const Timeline = ({ className }) => {
   );
 };
 
-export default Timeline;
+export default RawTimeline;

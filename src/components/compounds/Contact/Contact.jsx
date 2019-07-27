@@ -2,26 +2,29 @@ import React from 'react';
 import List from '../../molecules/List';
 import Typography from '../../atoms/Typography';
 
-const Contact = ({ contacts }) => {
+const Contact = ({ enableTooltip, contacts, className }) => {
   const [tooltip, setTooltip] = React.useState('');
   const parsedContacts = contacts.map(contact => {
     return {
       ...contact,
-      onMouseEnter: () => setTooltip(contact.name),
-      onMouseLeave: () => setTooltip('')
+      onMouseEnter: enableTooltip ? () => setTooltip(contact.name) : () => {},
+      onMouseLeave: enableTooltip ? () => setTooltip('') : () => {}
     };
   });
 
   return (
     <>
-      {Boolean(tooltip) && (
+      {Boolean(tooltip) && enableTooltip && (
         <Typography
-          className="contactTooltip"
+          className={`${className}__tooltip`}
           variant={'p'}
           children={tooltip}
         />
       )}
-      <List listItems={parsedContacts} className="contactList" />
+      <List
+        listItems={parsedContacts}
+        className={`${className}__contactList`}
+      />
     </>
   );
 };

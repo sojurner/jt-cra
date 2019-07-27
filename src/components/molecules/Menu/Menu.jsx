@@ -22,7 +22,7 @@ const Menu = ({ initial, open, onClose, links }) => {
         name={'ChevronRightCircle'}
       />
       <NavMenu onClose={onClose} links={links} />
-      <Contact contacts={contactList} />
+      <Contact enableTooltip={true} className={'menu'} contacts={contactList} />
     </aside>,
     document.querySelector('.App')
   );
