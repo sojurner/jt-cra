@@ -65,7 +65,7 @@ const FancyTimeline = () => {
           <p
             style={{
               position: 'absolute',
-              top: -17,
+              top: -20,
               left: activeCoordinates.startingPosition + 20,
               width: `${activeCoordinates.width}px`,
               borderBottom: '5px dashed white'
