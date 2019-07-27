@@ -1,9 +1,10 @@
 import React from 'react';
+import { withRouter } from 'react-router-dom';
 import Icon from '../../atoms/Icon';
 import Menu from '../../molecules/Menu';
 import ClickAwayListener from '../../atoms/ClickAwayListener';
 
-const Navigation = ({ inverted, drawerProps, links }) => {
+const Navigation = ({ inverted, drawerProps, links, history }) => {
   const [initial, setInitial] = React.useState(true);
 
   const { drawerOpen, setDrawerOpen } = drawerProps;
@@ -12,6 +13,8 @@ const Navigation = ({ inverted, drawerProps, links }) => {
     if (initial) setInitial(false);
     setDrawerOpen(!drawerOpen);
   };
+
+  console.log(history);
 
   return (
     <>
@@ -25,7 +28,12 @@ const Navigation = ({ inverted, drawerProps, links }) => {
       <Icon
         onClick={toggleDrawer}
         svgProps={{
-          fill: inverted ? 'black' : 'white'
+          fill:
+            history.location.pathname === '/'
+              ? inverted
+                ? 'black'
+                : 'white'
+              : 'black'
         }}
         className={'generic'}
         name={'Menu'}
@@ -34,4 +42,4 @@ const Navigation = ({ inverted, drawerProps, links }) => {
   );
 };
 
-export default Navigation;
+export default withRouter(Navigation);

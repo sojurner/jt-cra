@@ -39,13 +39,12 @@ const Profile = ({ className }) => {
   return (
     <div className={styles[className]}>
       <div
+        className={styles[className].abs}
         style={{
           height: 175,
           width: '100%',
-          backgroundImage: `url('https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/SxyKBum7ion8fkbr/videoblocks-gray-abstract-low-poly-triangle-background_sygowhrug_thumbnail-full01.png')`,
-          backgroundRepeat: 'no-repeat',
+          background: 'linear-gradient(0.25turn, #3f87a6, #00446f, #3f87a6)',
           position: 'absolute',
-          backgroundSize: 'cover',
           zIndex: -1,
           top: 0,
           left: 0

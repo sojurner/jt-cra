@@ -20,24 +20,33 @@ const About = () => {
                 marginBottom: 30
               }}
             >
-              <Typography variant={'h1'}>Timeline</Typography>
-              <Toggle
-                className={styles.toggle1}
-                children={
-                  <div
-                    className={
-                      !toggled
-                        ? `${styles.toggle1_inner} ${
-                            styles.toggle1_inner_active
-                          }`
-                        : `${styles.toggle1_inner} ${
-                            styles.toggle1_inner_inactive
-                          }`
-                    }
-                  />
-                }
-                onClick={handleToggle}
-              />
+              <div
+                style={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  width: 280,
+                  justifyContent: 'space-evenly'
+                }}
+              >
+                <Typography variant={'h1'}>Timeline</Typography>
+                <Toggle
+                  className={styles.toggle1}
+                  children={
+                    <div
+                      className={
+                        !toggled
+                          ? `${styles.toggle1_inner} ${
+                              styles.toggle1_inner_active
+                            }`
+                          : `${styles.toggle1_inner} ${
+                              styles.toggle1_inner_inactive
+                            }`
+                      }
+                    />
+                  }
+                  onClick={handleToggle}
+                />
+              </div>
             </div>
             {toggled ? (
               <Timeline className={'experienceEducationTimeline'} />

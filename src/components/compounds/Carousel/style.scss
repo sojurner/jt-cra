@@ -1,0 +1,57 @@
+.carousel__card {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  background: rgb(254, 254, 254);
+  padding: 10px 25px;
+  box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.301);
+  border-radius: 10px;
+  margin-top: 40px;
+  margin-bottom: 10px;
+
+  &__header {
+    height: inherit;
+    flex-direction: column;
+    justify-content: center;
+    padding-right: 30px;
+
+    &__title {
+      text-align: start;
+      padding-left: 10px;
+      color: rgb(85, 81, 81);
+      font-size: 1.6em;
+      margin-top: 0;
+      white-space: nowrap;
+    }
+
+    &__location {
+      text-align: start;
+      font-size: 1em;
+
+      padding-left: 10px;
+      color: rgba(0, 0, 0, 0.397);
+      white-space: nowrap;
+    }
+  }
+  &__description {
+    text-align: start;
+    max-width: 500px;
+    line-height: 23px;
+    padding: 20px 20px 20px 30px;
+    background: white;
+    border-left: 1px solid rgba(0, 0, 0, 0.171);
+    // border-radius: 30px;
+    max-height: 215px;
+    overflow: scroll;
+  }
+}
+.carousel__card {
+  &__withLink {
+    cursor: pointer;
+    &:hover {
+      box-shadow: 0 0 7px 1px rgba(0, 0, 0, 0.501);
+    }
+  }
+}
