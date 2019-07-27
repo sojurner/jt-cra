@@ -1,19 +1,20 @@
 export default [
   {
     imgUrl:
-      'https://us.123rf.com/450wm/vectorplus/vectorplus1606/vectorplus160600510/58663755-dumbbell-vector-icon-white-illustration-isolated-on-black-background-for-graphic-and-web-design-.jpg?ver=6',
+      'https://icon-library.net/images/about-me-icon-png/about-me-icon-png-14.jpg',
     title: 'About',
     to: '/about'
   },
   {
-    imgUrl: 'https://www.bosterbio.com/media/images/MB_TRC_bg.jpg',
+    imgUrl:
+      'https://d2slcw3kip6qmk.cloudfront.net/marketing/pages/consideration-page/Vertical-Timeline.jpeg',
     title: 'Work',
     to: '/projects'
   },
   {
     imgUrl:
-      'https://cdn.shopify.com/s/files/1/0533/2089/files/placeholder-images-image_large.png?v=1530129081',
+      'https://png.pngtree.com/thumb_back/fw800/back_pic/03/91/55/7457e005dcf1a56.jpg',
     title: 'Timeline',
-    to: '/contact'
+    to: '/timeline'
   }
 ];

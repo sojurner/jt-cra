@@ -21,7 +21,7 @@ const years = [
 const experience = 'experience';
 const education = 'education';
 
-const ToggleTimeline = () => {
+const FancyTimeline = () => {
   const startRef = React.useRef();
   const endRef = React.useRef();
   const [activeYears, setActiveYears] = React.useState([]);
@@ -123,4 +123,4 @@ const ToggleTimeline = () => {
   );
 };
 
-export default ToggleTimeline;
+export default FancyTimeline;

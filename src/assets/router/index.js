@@ -10,14 +10,20 @@ export const routes = [
   {
     exact: true,
 
-    path: '/about',
-    component: lazy(() => import('../../components/pages/About'))
+    path: '/timeline',
+    component: lazy(() => import('../../components/pages/Timeline'))
   },
   {
     exact: true,
 
     path: '/projects',
     component: lazy(() => import('../../components/pages/Projects'))
+  },
+  {
+    exact: true,
+
+    path: '/about',
+    component: lazy(() => import('../../components/pages/About'))
   }
 ];
 
@@ -40,7 +46,17 @@ export const links = [
     children: (
       <>
         <Icon className={navigationItemClass} name={'User'} />
-        About
+        About Me
+      </>
+    )
+  },
+  {
+    exact: true,
+    to: '/timeline',
+    children: (
+      <>
+        <Icon className={navigationItemClass} name={'Time'} />
+        Timeline
       </>
     )
   },

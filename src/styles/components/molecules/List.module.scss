@@ -1,6 +1,6 @@
 @import '../../base/list';
 
-.contactList {
+.menu__contactList {
   display: flex;
   position: absolute;
   bottom: 0;
@@ -30,5 +30,24 @@
   }
 }
 
-.projectList {
+.about__contactList {
+  display: flex;
+  width: 100%;
+  padding: 10px 0;
+  justify-content: center;
+  border-top: 1px solid rgba(92, 41, 150, 0.199);
+  margin: 0;
+
+  li {
+    border-radius: 50%;
+    margin: 0 auto;
+
+    button {
+      color: rgb(126, 126, 126);
+      border-radius: 50%;
+      &:hover {
+        background: rgb(240, 240, 240);
+      }
+    }
+  }
 }
