@@ -5,8 +5,8 @@ const Education = ({ list, ...otherProps }) => {
   const cards = list.map((item, index) => (
     <section key={`education-${index}`}>
       <div>
-        <h4 children={item.type} />
-        <p children={item.institution} />
+        <h4 children={item.title} />
+        <p children={item.location} />
       </div>
       <section>
         <h6 children={moment(item.start).format('MMM-YYYY')} />

@@ -6,7 +6,8 @@
   margin: auto;
   background: rgb(254, 254, 254);
   padding: 10px 25px;
-  box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.301);
+  box-shadow: 0 0 7px 1px rgba(0, 0, 0, 0.301);
+
   border-radius: 10px;
   margin-top: 40px;
   margin-bottom: 10px;
@@ -48,10 +49,26 @@
   }
 }
 .carousel__card {
+  margin: 50px auto;
   &__withLink {
     cursor: pointer;
     &:hover {
       box-shadow: 0 0 7px 1px rgba(0, 0, 0, 0.501);
     }
+  }
+}
+
+.alice-carousel {
+  height: 100%;
+
+  & > div:nth-child(1) {
+    height: 50%;
+    background: linear-gradient(
+      0.25turn,
+      rgba(63, 135, 166, 0.089),
+      rgba(0, 68, 111, 0.212),
+      rgba(63, 135, 166, 0.055)
+    );
+    box-shadow: 0 0 5px 1px rgba(12, 13, 17, 0.459);
   }
 }
