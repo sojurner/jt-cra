@@ -18,7 +18,7 @@ const RandomQuotes = () => {
       <div
         style={{
           display: 'flex',
-          justifyContent: 'space-around',
+          justifyContent: 'space-between',
           alignItems: 'center',
           margin: '22px 0',
           padding: '15px 0',
