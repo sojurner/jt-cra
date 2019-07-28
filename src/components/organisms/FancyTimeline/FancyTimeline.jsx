@@ -115,6 +115,7 @@ const FancyTimeline = () => {
         <Loading />
       ) : (
         <Carousel
+          rootProps={{ mouseDragEnabled: true }}
           handleActiveChange={handleActiveChange}
           list={timeline[activeTimeline]}
         />

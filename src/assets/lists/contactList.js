@@ -18,7 +18,8 @@ const contactList = [
   {
     name: 'Instagram',
     children: <Icon name="Instagram" className="menu__contact" />,
-    url: 'https://www.instagram.com/instajohnctan/'
+    onClick: () =>
+      window.open('https://www.instagram.com/instajohnctan/', '_blank').focus()
   },
   {
     name: 'Github',

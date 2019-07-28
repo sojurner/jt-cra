@@ -20,9 +20,9 @@ const RandomQuotes = () => {
           display: 'flex',
           justifyContent: 'space-between',
           alignItems: 'center',
-          margin: '22px 0',
+          margin: '22px 10px',
           padding: '15px 0',
-          boxShadow: 'rgba(0, 0, 0, 0.32) 0px 0px 3px 0px',
+          boxShadow: 'rgba(0, 0, 0, 0.52) 0px 0px 3px 0px',
           background: '#fbfbfb',
           borderRadius: 5
         }}

@@ -1,8 +1,11 @@
 .about__body {
-  background: url('https://www.ivani.com/wp-content/uploads/2018/10/Screen-Shot-2018-10-29-at-15.19.59.png')
-    no-repeat center center fixed;
-  background-blend-mode: multiply;
-  background-size: cover;
+  background: linear-gradient(182deg, #ececec, #ffffff, #dbf7ff);
+  background-size: 600% 600%;
+
+  -webkit-animation: gradient_flux 10s ease infinite;
+  -moz-animation: gradient_flux 10s ease infinite;
+  animation: gradient_flux 10s ease infinite;
+
   position: fixed;
   padding: 0px;
   margin: 0px;
@@ -605,6 +608,39 @@
     }
     100% {
       opacity: 0;
+    }
+  }
+  @-webkit-keyframes gradient_flux {
+    0% {
+      background-position: 66% 0%;
+    }
+    50% {
+      background-position: 35% 100%;
+    }
+    100% {
+      background-position: 66% 0%;
+    }
+  }
+  @-moz-keyframes gradient_bfgradient_flux {
+    0% {
+      background-position: 66% 0%;
+    }
+    50% {
+      background-position: 35% 100%;
+    }
+    100% {
+      background-position: 66% 0%;
+    }
+  }
+  @keyframes gradient_flux {
+    0% {
+      background-position: 66% 0%;
+    }
+    50% {
+      background-position: 35% 100%;
+    }
+    100% {
+      background-position: 66% 0%;
     }
   }
 }
