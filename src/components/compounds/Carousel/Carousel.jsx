@@ -12,7 +12,7 @@ const toInt = strInt => {
   return parseInt(strInt);
 };
 
-const Carousel = ({ list, handleActiveChange }) => {
+const Carousel = ({ list, handleActiveChange, rootProps }) => {
   const [activeList, setActiveList] = React.useState(list);
   React.useEffect(() => {
     setActiveList(list);
@@ -35,6 +35,7 @@ const Carousel = ({ list, handleActiveChange }) => {
 
   return (
     <AliceCarousel
+      {...rootProps}
       onSlideChanged={onSlideChanged}
       onInitialized={handleInitialization}
       mouseDragEnabled

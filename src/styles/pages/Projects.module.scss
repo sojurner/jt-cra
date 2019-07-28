@@ -1,0 +1,67 @@
+.projectsBody {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+
+  .alice-carousel__stage-item {
+    min-height: 400px;
+    max-height: 400px;
+  }
+
+  &__iconGroup {
+    display: flex;
+    flex-basis: 20px;
+    font-size: 1.6em;
+    color: rgb(77, 77, 77);
+    justify-content: space-around;
+    margin: 0 auto;
+    width: 150px;
+  }
+
+  &__carousel {
+    flex: 1 1 auto;
+    display: flex;
+    align-items: center;
+    padding: 0 0 20px 0;
+
+    &__description {
+      color: white;
+      font-size: 15px;
+      padding: 0 50px;
+      &-active {
+        animation: fadeInDown 0.4s linear;
+      }
+
+      &-inactive {
+        animation: fadeOutdown 0.4s linear;
+      }
+    }
+  }
+
+  @keyframes fadeInDown {
+    from {
+      opacity: 0;
+      -webkit-transform: translate3d(0, -100%, 0);
+      transform: translate3d(0, -100%, 0);
+    }
+
+    to {
+      opacity: 1;
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+    }
+  }
+
+  @keyframes fadeOutDown {
+    from {
+      opacity: 1;
+    }
+
+    to {
+      opacity: 0;
+      -webkit-transform: translate3d(0, 100%, 0);
+      transform: translate3d(0, 100%, 0);
+    }
+  }
+}
